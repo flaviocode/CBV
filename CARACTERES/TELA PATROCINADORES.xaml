@@ -1,0 +1,8 @@
+<UserControl Width="1920" Height="1080" Panel.ZIndex="500" InputMethod.IsInputMethodEnabled="True" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mtl="clr-namespace:vMixTitleLibrary;assembly=vMixTitleLibrary">
+  <Grid InputMethod.IsInputMethodEnabled="True">
+    <Image Stretch="Fill" Width="1920" Height="1080" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="0" InputMethod.IsInputMethodEnabled="True" />
+    <Image Source="ARTE-PATROCINADOR.png" Name="BACKGROUND" Width="1920" Height="1080" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" InputMethod.IsInputMethodEnabled="True" />
+    <mtl:TextBlockDesign FontStyle="Normal" FontWeight="ExtraBlack" FontFamily="Mukta Vaani" Fill="#FFFFFFFF" FontSize="64" TextAlignment="Center" Text="INFORMAÇÕES PRINCIPAIS" Name="INFO_PRINCIPAIS" Width="1256.83168316832" Height="106.366668701172" Margin="39.3366317749023,843.53466796875,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
+    <mtl:TextBlockDesign FontStyle="Normal" FontWeight="SemiBold" FontFamily="Mukta Vaani" Fill="#FFFFFFFF" FontSize="60" TextAlignment="Center" Text="texto secundário" Name="TEXTO_SECUNDARIO" Width="1253.26732673268" Height="99.7200012207031" Margin="41.6435661315918,924.782165527344,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
+  </Grid>
+</UserControl>

@@ -1,0 +1,161 @@
+﻿<!-- CONFIG - by SocialWall.me
+1/ Update your Background (:16)
+2/ Update your Logo (:87)
+3/ Update your Title (:88)
+4/ Update your Access Token (:105)
+5/ Update your Post ID (:106) -->
+<!-- Original source code: https://gist.github.com/anonymous/7073ea6c601f28aa65e5a077ef875526 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	<title>My Facebook Reactions - SocialWall.me</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+
+        html {
+          width: 100%;
+          height: 100%;
+          margin:0;
+          padding:0;
+          background: url("background.png");
+          background-size: cover; 
+          font-family: 'Titillium Web', sans-serif;
+        }
+
+		body{
+			margin: 0;
+            color: #333;
+            width: 100%;
+            height: 100%;
+		}
+
+        header{
+            width: 100%;
+            text-align: center;
+            color: #333;
+            padding: 40px 0px;
+        }
+
+        #container{
+        	width: 1000px;
+        	margin: auto;
+			margin-top:140px;
+        }
+
+        .reaction{
+            display: inline-block;
+            width: 45%;
+        }
+
+        .image{
+        	height: 200px;
+        	width: 200px;
+        	border-radius: 100%;
+        	margin: auto;
+        }
+
+        #image1{background: url(""); background-size:cover;}
+        #image2{background: url("");background-size:cover;}
+        .answer{
+            width: 100%;
+            text-align: center;
+            padding: 10px 0px;
+            color: #ffd200;
+			font-weight: bolder;
+			text-shadow: 2px 2px #000;
+            font-size: 30px;  
+        }
+
+        .tc{
+            width: 100%;
+            height: 80px;
+            background-color: #fff;
+            border-radius: 30px;
+        }
+
+        .emoji{
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            float: left
+        }
+
+        .number{
+            float: left;
+            font-size: 50px;
+            
+        }
+		#left{float:left;}
+		#right{float:right;}
+	</style>
+</head>
+<body>
+    <header>
+        <h1> </h1> <!-- YOUR TITLE HERE -->     
+    </header>
+    <!-- REACTIONS -->
+    <div id="container">
+	
+    <div class="reaction" id="left">
+    	<div class="image" id="image1"></div>
+    	<div class="counter">
+	        <div class="answer"></div>
+		    <div class="tc wf likes"><img class="emoji" src="emojis/like.png"><span class="number"></span></div>
+	    </div>
+    </div>
+
+    <div class="reaction" id="right">
+    	<div class="image" id="image2"></div>
+    	<div class="counter">
+	        <div class="answer"></div>
+	        <div class="tc wf happy"><img class="emoji" src="emojis/love.png"><span class="number"></span></div>
+        </div>
+    </div>
+
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="lodash.min.js"></script>
+    <script>
+    "use strict";
+    var access_token = '840088016143255|nj7NF80MKDa3egxqQa3R2EFFFHA'; // PASTE HERE YOUR FACEBOOK ACCESS TOKEN
+    var postID = '2042942122383928'; // PASTE HERE YOUR POST ID 
+    var refreshTime = 5; // Refresh time in seconds
+    var defaultCount = 0; // Default count to start with
+
+    var reactions = ['LIKE', 'LOVE', 'WOW', 'HAHA', 'SAD', 'ANGRY'].map(function (e) {
+        var code = 'reactions_' + e.toLowerCase();
+        return 'reactions.type(' + e + ').limit(0).summary(total_count).as(' + code + ')'
+    }).join(',');
+
+    var	v1 = $('.likes .number'),
+    	v2 = $('.happy .number'),
+        v3 = $('.sad .number'),
+        v4 = $('.fml .number'),
+        v5 = $('.angry .number'),
+        v6 = $('.shock .number');
+
+    function refreshCounts() {
+        var url = 'https://graph.facebook.com/v2.8/?ids=' + postID + '&fields=' + reactions + '&access_token=' + access_token;
+    	$.getJSON(url, function(res){
+    		v1.text(defaultCount + res[postID].reactions_like.summary.total_count);
+    		v2.text(defaultCount + res[postID].reactions_love.summary.total_count);
+            v3.text(defaultCount + res[postID].reactions_sad.summary.total_count);
+            v4.text(defaultCount + res[postID].reactions_haha.summary.total_count);
+            v5.text(defaultCount + res[postID].reactions_angry.summary.total_count);
+            v6.text(defaultCount + res[postID].reactions_wow.summary.total_count);
+    	});
+    }
+
+    $(document).ready(function(){
+        setInterval(refreshCounts, refreshTime * 1000);
+        refreshCounts();
+    });
+    </script>
+</body>
+</html>

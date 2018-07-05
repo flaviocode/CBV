@@ -1,0 +1,7 @@
+<UserControl Width="1920" Height="1080" Panel.ZIndex="500" InputMethod.IsInputMethodEnabled="True" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Grid InputMethod.IsInputMethodEnabled="True">
+    <Image Stretch="Fill" Width="1920" Height="1080" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="0" InputMethod.IsInputMethodEnabled="True" />
+    <Image Source="BG - TELA-TODOS-PATROCINADORES.png" Name="BACKGROUND" Width="1920" Height="1080" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" InputMethod.IsInputMethodEnabled="True" />
+    <Image Source="PATROCINADORES-TELA-DE-ESPERA.png" Name="PATROCINADORES" Width="1920" Height="246" Margin="0,835,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" InputMethod.IsInputMethodEnabled="True" />
+  </Grid>
+</UserControl>

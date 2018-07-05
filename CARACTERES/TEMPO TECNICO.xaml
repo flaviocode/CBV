@@ -1,0 +1,9 @@
+<UserControl Width="1920" Height="1080" Panel.ZIndex="500" InputMethod.IsInputMethodEnabled="True" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mtl="clr-namespace:vMixTitleLibrary;assembly=vMixTitleLibrary">
+  <Grid InputMethod.IsInputMethodEnabled="True">
+    <Image Stretch="Fill" Width="1920" Height="1080" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="0" InputMethod.IsInputMethodEnabled="True" />
+    <Image Source="TEMPO-TECNICO.png" Name="BQCKGROUND" Width="1920" Height="1080" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" InputMethod.IsInputMethodEnabled="True" />
+    <mtl:TextBlockDesign FontStyle="Normal" FontWeight="Bold" FontFamily="Mukta Vaani" Fill="#FF11447D" FontSize="35" TextAlignment="Left" Text="{}{0:mm:ss tt}" Name="CEONOMETRO" Width="200" Height="58.1699981689453" Margin="507.158416748047,942.693054199219,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
+    <mtl:TextBlockDesign FontStyle="Normal" FontWeight="Normal" FontFamily="Titan One" Fill="#FFFFFFFF" FontSize="30" Text="Tempo técnico" Name="TITULO" Width="371.089108910891" Height="34.3499984741211" Margin="140.356430053711,997.89111328125,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
+    <Image Source="PATROCINADOR-TEMPO-TECNICO.png" Name="PATROCINADOR" Width="221" Height="94" Margin="597.098999023438,946.742553710938,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" InputMethod.IsInputMethodEnabled="True" />
+  </Grid>
+</UserControl>

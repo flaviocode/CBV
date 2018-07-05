@@ -1,0 +1,9 @@
+<UserControl Width="1920" Height="1080" Panel.ZIndex="500" InputMethod.IsInputMethodEnabled="True" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mtl="clr-namespace:vMixTitleLibrary;assembly=vMixTitleLibrary">
+  <Grid InputMethod.IsInputMethodEnabled="True">
+    <Image Stretch="Fill" Width="1920" Height="1080" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="0" InputMethod.IsInputMethodEnabled="True" />
+    <Image Source="VOTOS-FACEBOOK.png" Name="Image1" Width="1920" Height="1080" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" InputMethod.IsInputMethodEnabled="True" />
+    <mtl:TextBlockDesign FontStyle="Normal" FontWeight="ExtraBold" FontFamily="Mukta Vaani" Fill="#FFFFFFFF" FontSize="35" TextAlignment="Center" Text="QUEM LEVA A MELHOR" Name="QUEM_LEVA_MELHOR" Width="504.752475247525" Height="58.1699981689453" Margin="709.17822265625,1000.33660888672,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
+    <Image Source="IMAGEM-DUPLA.png" Name="IMG_DULPA_1" Width="235" Height="230" Margin="664.792053222656,660,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" InputMethod.IsInputMethodEnabled="True" />
+    <Image Source="IMAGEM-DUPLA.png" Name="IMG_DULPA_2" Width="235" Height="230" Margin="1015.22778320313,660,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" InputMethod.IsInputMethodEnabled="True" />
+  </Grid>
+</UserControl>

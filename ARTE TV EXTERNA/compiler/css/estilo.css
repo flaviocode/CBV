@@ -1,0 +1,21 @@
+.jumbotron {
+    padding: 2rem;
+}
+
+.btn-link {
+    color: #222;
+}
+
+.table th, .table td {
+    padding: 15px;
+    font-size: 13px;
+}
+
+.table thead tr {
+    padding: 15px !important;
+    background: #bacaca;
+} 
+
+.text-secondary {
+    color: #BBB !important;
+}
